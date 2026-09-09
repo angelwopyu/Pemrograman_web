@@ -1,45 +1,167 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Belajar HTML</title>
+    <title>MyWebsite</title>
+
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Website Saya</h1>
-    </header>
+    <!-- =========================
+         BANNER
+    ========================== -->
 
-    <nav>
-        <a href="#">Beranda</a>
-        <a href="#">Tentang</a>
-        <a href="#">Kontak</a>
+    <div class="banner">
+        <div class="banner-content">
+            <strong>Selamat Datang di MyWebsite</strong>
+            <span>Belajar membuat website dengan HTML & CSS</span>
+        </div>
+
+        <button class="banner-close" id="bannerClose">
+            &times;
+        </button>
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            MyWebsite
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+
+            <a href="#">Beranda</a>
+
+            <a href="#">Tentang</a>
+
+            <a href="#">Layanan</a>
+
+            <a href="#">Kontak</a>
+
+        </div>
+
+        <!-- Theme Switch -->
+        <div class="theme-switch">
+
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+
+                <span class="slider"></span>
+            </label>
+
+            <span id="themeText">
+                Light
+            </span>
+
+        </div>
+
     </nav>
+
+
+    <!-- =========================
+         MARQUEE
+    ========================== -->
+
+    <div class="marquee">
+
+        <div class="marquee-content">
+
+            <span>
+                📢 Pengumuman: Selamat datang di website kami.
+            </span>
+
+            <span>
+                📚 Silakan kunjungi halaman pembelajaran.
+            </span>
+
+            <span>
+                💡 Terus belajar dan tingkatkan kemampuan Anda.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
     <main>
 
         <section>
-            <h2>Selamat Datang</h2>
-            <p>
-                Ini adalah halaman website pertama saya menggunakan HTML.
-            </p>
-        </section>
 
-        <section>
-            <h2>Tentang Saya</h2>
+            <h1>
+                Selamat Datang
+            </h1>
+
             <p>
-                Saya sedang belajar membuat website menggunakan HTML.
+                Ini adalah contoh website sederhana
+                menggunakan HTML, CSS, dan JavaScript.
             </p>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Website Saya</p>
-    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+        // Dark Mode
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+        const themeText =
+            document.getElementById("themeText");
+
+        themeToggle.addEventListener("change", function () {
+
+            document.body.classList.toggle("dark");
+
+            if (themeToggle.checked) {
+
+                themeText.textContent = "Dark";
+
+            } else {
+
+                themeText.textContent = "Light";
+
+            }
+
+        });
+
+
+        // Tutup Banner
+
+        const bannerClose =
+            document.getElementById("bannerClose");
+
+        const banner =
+            document.querySelector(".banner");
+
+        bannerClose.addEventListener("click", function () {
+
+            banner.style.display = "none";
+
+        });
+    </script>
 
 </body>
+
 </html>
