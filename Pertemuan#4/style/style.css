@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+nav {
+    background-color : #7bc6f8;
+    color: #fff;
+    padding: 20px 60px 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav  a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
